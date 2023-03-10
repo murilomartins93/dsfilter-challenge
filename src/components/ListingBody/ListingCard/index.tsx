@@ -1,12 +1,11 @@
 import ProductDetailCard from "../../ProductDetailCard";
-import * as productService from "../../../services/product-service";
-import { useState } from "react";
+import { ProductDTO } from "../../../models/Product";
 
-function ListingCard() {
-  const [products, setProducts] = useState(
-    productService.findByPrice(0, 20000)
-  );
+type Props = {
+  products: ProductDTO[];
+};
 
+function ListingCard({ products }: Props) {
   return (
     <section id="listing">
       <div className="dsf-card">
