@@ -11,15 +11,11 @@
 
   --dsf-input-font: #6f6f6f;
   --dsf-placeholder-font: #c2c2c2;
-  --dsf-input-border: #c2c2c2;
+  --dsf-input-border-primary: #c2c2c2;
+  --dsf-input-border-secondary: #55bc04;
 
   --dsf-btn-primary: #55bc04;
   --dsf-btn-secondary: #ffffff;
-
-  --dsf-listing-primary-font: #6f6f6f;
-  --dsf-listing-secondary-font: #55bc04;
-  --dsf-listing-bg: #ffffff;
-  --dsf-listing-border: #55bc04;
 }
 
 * {
@@ -38,4 +34,23 @@ a:hover {
 html,
 body {
   background-color: var(--dsf-bg-tertiary);
+}
+
+main {
+  padding: 0 20px;
+}
+
+/* Generic Styles */
+
+.dsf-container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.dsf-card {
+  background-color: var(--dsf-bg-secondary);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
 }

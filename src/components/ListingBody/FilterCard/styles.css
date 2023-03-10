@@ -1,0 +1,43 @@
+.dsf-form {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.dsf-form-box {
+  height: 40px;
+  max-width: 200px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dsf-form input {
+  color: var(--dsf-input-font);
+  border: 1px solid var(--dsf-input-border-primary);
+}
+
+.dsf-form input::placeholder {
+  color: var(--dsf-placeholder-font);
+}
+
+.dsf-form input:focus {
+  outline: none;
+}
+
+.dsf-form button {
+  font-weight: 700;
+  font-size: 16px;
+  background-color: var(--dsf-btn-primary);
+  color: var(--dsf-btn-secondary);
+  border: none;
+  cursor: pointer;
+}
+
+.dsf-form button:hover {
+  background-color: var(--dsf-btn-secondary);
+  color: var(--dsf-btn-primary);
+  border: 1px solid var(--dsf-btn-primary);
+}

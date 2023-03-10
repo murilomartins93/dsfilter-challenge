@@ -1,13 +1,11 @@
 import Header from "../../components/Header";
+import ListingBody from "../../components/ListingBody";
 
 function Home() {
   return (
     <>
       <Header />
-      <main>
-        <section id="filter-card">Filter Card</section>
-        <section id="listing">Listing</section>
-      </main>
+      <ListingBody />
     </>
   );
 }

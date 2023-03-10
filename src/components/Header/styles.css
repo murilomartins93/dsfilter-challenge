@@ -4,22 +4,21 @@
   color: var(--dsf-font-primary);
   display: flex;
   align-items: center;
+  padding: 20px;
 }
 
 .dsf-nav {
-  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
 
-.dsf-header-title {
-  font-weight: 700;
+.dsf-header-title h1 {
   font-size: 20px;
+  font-weight: 700;
 }
 
-.dsf-nav-counter {
+.dsf-nav-counter h1 {
   font-weight: 700;
   font-size: 12px;
 }

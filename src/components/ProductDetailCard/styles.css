@@ -1,0 +1,19 @@
+.dsf-detail-card {
+  background-color: var(--dsf-bg-secondary);
+  border: 1px solid var(--dsf-input-border-secondary);
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+}
+
+.dsf-detail-card h1 {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--dsf-font-tertiary);
+}
+
+.dsf-detail-card p {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--dsf-font-secondary);
+}
