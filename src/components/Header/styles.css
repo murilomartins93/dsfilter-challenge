@@ -1,0 +1,25 @@
+.dsf-header {
+  height: 70px;
+  background-color: var(--dsf-bg-primary);
+  color: var(--dsf-font-primary);
+  display: flex;
+  align-items: center;
+}
+
+.dsf-nav {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dsf-header-title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.dsf-nav-counter {
+  font-weight: 700;
+  font-size: 12px;
+}
