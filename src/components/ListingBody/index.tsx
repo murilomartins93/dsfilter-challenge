@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import FilterCard from "./FilterCard";
 import ListingCard from "./ListingCard";
 

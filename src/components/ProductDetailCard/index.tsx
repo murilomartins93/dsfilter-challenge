@@ -1,10 +1,15 @@
+import { ProductDTO } from "../../models/Product";
 import "./styles.css";
 
-function ProductDetailCard() {
+type Props = {
+  product: ProductDTO;
+};
+
+function ProductDetailCard({ product }: Props) {
   return (
-    <div className="dsf-detail-card">
-      <h1>PC Gamer Pro</h1>
-      <p>R$ 1200.00</p>
+    <div className="dsf-detail-card dsf-mt20">
+      <h1>{product.name}</h1>
+      <p>R$ {product.price.toFixed(2)}</p>
     </div>
   );
 }
