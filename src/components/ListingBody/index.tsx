@@ -1,7 +1,8 @@
 import FilterCard from "./FilterCard";
 import ListingCard from "./ListingCard";
 import * as productService from "../../services/product-service";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { ContextProductCount } from "../../utils/context-count";
 
 type Params = {
   minPrice: number;
@@ -9,6 +10,8 @@ type Params = {
 };
 
 function ListingBody() {
+  const { setContextProductCount } = useContext(ContextProductCount);
+
   const [params, setParams] = useState<Params>({
     minPrice: 0,
     maxPrice: Number.MAX_VALUE,
@@ -22,15 +25,16 @@ function ListingBody() {
     console.log(params);
     setParams({
       ...params,
-      minPrice: Number(params.minPrice) || 0,  // if not a number, 0
+      minPrice: Number(params.minPrice) || 0, // if not a number, 0
       maxPrice: Number(params.maxPrice) || Number.MAX_VALUE, // if not a number, MAX_VALUE
     });
   }
 
   useEffect(() => {
-    console.log(params);
-    setProducts(productService.findByPrice(params.minPrice, params.maxPrice));
-  }, [params]);
+    const newProducts = productService.findByPrice(params.minPrice, params.maxPrice);
+    setProducts(newProducts); // async function waits for response before updating;
+    setContextProductCount(newProducts.length);
+ }, [params]);
 
   return (
     <main>
