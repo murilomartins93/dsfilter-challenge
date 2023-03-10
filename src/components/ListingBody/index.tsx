@@ -22,7 +22,6 @@ function ListingBody() {
   );
 
   function handleFilter(params: Params) {
-    console.log(params);
     setParams({
       ...params,
       minPrice: Number(params.minPrice) || 0, // if not a number, 0
@@ -31,10 +30,13 @@ function ListingBody() {
   }
 
   useEffect(() => {
-    const newProducts = productService.findByPrice(params.minPrice, params.maxPrice);
+    const newProducts = productService.findByPrice(
+      params.minPrice,
+      params.maxPrice
+    );
     setProducts(newProducts); // async function waits for response before updating;
     setContextProductCount(newProducts.length);
- }, [params]);
+  }, [params]);
 
   return (
     <main>
